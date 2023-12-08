@@ -1,0 +1,191 @@
+.custom-modal {
+    color: #555;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    button {
+        white-space: normal;
+    }
+
+    mat-divider {
+        margin: 10px 0;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+
+        h1 {
+            margin: 0;
+            padding-left: 14px;
+            color: #3f4756;
+        }
+
+        mat-icon {
+            background-color: transparent;
+            background: transparent;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+    }
+
+    .content {
+        overflow-x: hidden;
+        font-size: 14px;
+
+        input[type="file"] {
+            display: none;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        .profile-photo {
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            img,
+            .hover-image {
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+                object-fit: cover;
+            }
+
+            .hover-photo {
+                height: auto;
+                border-radius: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hover-photo:hover .photo-overlay,
+            .hover-photo:hover mat-icon,
+            .hover-photo:hover p {
+                opacity: 1;
+                transition: ease-in-out .4s;
+            }
+
+            .hover-photo:hover mat-icon {
+                top: 35%;
+            }
+
+            .hover-photo:hover p {
+                top: 60%;
+            }
+
+            .photo-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                border-radius: 100%;
+                transition: ease-in-out .4s;
+                opacity: 0;
+            }
+
+            mat-icon,
+            p {
+                position: absolute;
+                top: -100px;
+                transition: ease-in-out .4s;
+                opacity: 0;
+                color: white;
+            }
+        }
+
+        label {
+            margin: 0 10px 0 0;
+        }
+
+        &.apontamento {
+            ngx-material-timepicker-toggle {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+
+                svg {
+                    position: absolute;
+                    right: 5px;
+                    top: 6px;
+                    width: 15px;
+                    fill: #757575;
+                }
+            }
+
+            mat-select {
+                .mat-select-placeholder {
+                    position: absolute;
+                }
+
+                .mat-select-value {
+                    height: 22px;
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+        }
+
+        .duas-colunas {
+            display: flex;
+
+            .item1 {
+                padding-right: 5px;
+                flex: 1;
+            }
+
+            .item2 {
+                padding-left: 5px;
+                flex: 1;
+            }
+
+            @media only screen and (max-width: 767.98px) {
+                flex-direction: column;
+
+                .item1,
+                .item2 {
+                    padding: 0;
+                }
+            }
+
+        }
+    }
+
+    .inline-alignment {
+        display: flex;
+
+        *:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        @media only screen and (max-width: 767.98px) {
+            flex-direction: column;
+            align-items: center;
+
+            *:not(:last-child) {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.title-modal {
+    font-weight: bolder !important;
+    color: #df0000 !important;
+    font-size: 1.3rem !important;
+}

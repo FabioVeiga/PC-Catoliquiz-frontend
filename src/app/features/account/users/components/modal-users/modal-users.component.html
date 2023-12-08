@@ -1,0 +1,61 @@
+<div class="custom-modal">
+  <div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle class="header">
+    <h3 mat-dialog-title>Detalhes usuários</h3>
+    <mat-icon mat-dialog-close="cancel">close</mat-icon>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-progress-bar [hidden]="!isLoading" color="primary" mode="indeterminate"></mat-progress-bar>
+  <div mat-dialog-content class="content">
+    <form *ngIf="!isLoading" [formGroup]="form">
+      <div class="element-inline">
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome" placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Apelido</mat-label>
+          <input matInput formControlName="apelido" placeholder="Apelido">
+        </mat-form-field>
+      </div>
+      <div class="element-inline">
+        <mat-form-field>
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="email" placeholder="E-mail">
+        </mat-form-field>
+      </div>
+      <div class="element-inline">
+        <mat-form-field>
+          <mat-label>Role</mat-label>
+          <input matInput formControlName="role" placeholder="Role">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Código</mat-label>
+          <input matInput formControlName="codigo" placeholder="Código">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Nota</mat-label>
+          <input matInput formControlName="nota" placeholder="Nota">
+        </mat-form-field>
+      </div>
+      <div class="element-inline">
+        <mat-form-field>
+          <mat-label>Data criação</mat-label>
+          <input matInput formControlName="dataCriacao" placeholder="Data de criação">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Data alteração</mat-label>
+          <input matInput formControlName="dataAlteracao" placeholder="Data última alteração">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Data exclusão</mat-label>
+          <input matInput formControlName="dataExclusao" placeholder="Data de exclusão">
+        </mat-form-field>
+      </div>
+      <mat-slide-toggle formControlName="banido" color="primary"></mat-slide-toggle>
+      <mat-label class="banido"> Banido?</mat-label>
+      <br>
+      <mat-slide-toggle formControlName="ativo" color="primary"></mat-slide-toggle>
+      <mat-label class="banido"> Ativo?</mat-label>
+    </form>
+  </div>
+</div>

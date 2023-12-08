@@ -1,0 +1,35 @@
+<div class="contents order-2 order-md-1">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-7">
+        <div class="container-login">
+          <div class="content-forms">
+            <h3>Paínel de controle <strong>Quizz Católico</strong>.</h3>
+            <p class="mb-4">Acesso restrito.</p>
+            <app-loader *ngIf="isLoading" [isLoading]="isLoading"></app-loader>
+            <p class="text-center" *ngIf="error"><strong class="text-danger">{{error}}</strong></p>
+            <form *ngIf="!isLoading" class="login-card" [formGroup]="form">
+              <mat-form-field class="input-person" appearance="outline">
+                <mat-icon color="primary" matPrefix>person</mat-icon>
+                <input class="field" matInput formControlName="apelidoOuEmail" placeholder="Insira seu usuário">
+              </mat-form-field>
+              <mat-form-field class="input-person" appearance="outline">
+                <mat-icon color="primary" matPrefix>https</mat-icon>
+                <input class="field" matInput formControlName="senha" [type]="hide ? 'password' : 'text'"
+                  placeholder="Insira sua senha">
+                <button type="button" mat-icon-button matSuffix (click)="togglePasswordVisibility()">
+                  <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+              </mat-form-field>
+              <div>
+                <button mat-flat-button class="custom-button mb-3" [disabled]="form.invalid"
+                  (click)="loginUser()">Entrar</button>
+                <a class="forgotpass" [routerLink]='"/signin/forget-password"'>Esqueceu sua senha?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

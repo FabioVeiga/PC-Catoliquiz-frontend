@@ -1,0 +1,55 @@
+.title {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+div {
+    text-align: center;
+}
+.header-logo {
+    text-align: center;
+    height: 120px;
+    margin-bottom: 4rem;
+    img {
+        margin-top: 100px;
+        height: 40px;
+        left: calc(50% - 90px);
+    }
+}
+.canvas-wrapper {
+    flex-grow: 1;
+    z-index: 1;
+    align-items: center;
+    .canvas {
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.image {
+    width: 2rem;
+    margin-right: 10px;
+}
+
+.tiktok {
+    width: 2.6rem;
+    margin-right: 4px;
+}
+
+.instagram {
+    width: 2.9rem;
+    margin-right: 10px;
+}
+
+.icon-display {
+    transform: scale(1.5);
+  }

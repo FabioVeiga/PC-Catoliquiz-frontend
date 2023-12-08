@@ -1,0 +1,50 @@
+//Bootstrap Temp
+.d-flex {
+    display: flex;
+    align-items: center;
+    float: right !important;
+  }
+
+  //Original
+  .go-to-container {
+    align-items: center;
+    display: flex;
+    background: white;
+    mat-form-field {
+      width: 56px;
+      height: 4rem;
+      margin: 6px 4px 0 4px;
+      font-size: 12px;
+    }
+    .mat-mdc-select{
+      font-size: 12px;
+    }
+    .go-to-label {
+      margin: 0 4px;
+      font-size: 12px;
+      color: rgba(0,0,0,.54);
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+  }
+
+::ng-deep.mat-mdc-select-panel-above .mdc-menu-surface.mat-mdc-select-panel{
+  min-width: 112px !important;
+}
+
+:host::ng-deep.mdc-notched-outline__trailing{
+  border: none !important;
+}
+:host::ng-deep .mdc-notched-outline__notch {
+  border: none !important;
+}
+:host::ng-deep.mdc-notched-outline__leading {
+  border: none !important;
+}
+
+  /**Created by Sameer Khan**/
+
+  @media screen and (max-width: 400px) {
+    .go-to-container{
+      display: none;
+    }
+  }

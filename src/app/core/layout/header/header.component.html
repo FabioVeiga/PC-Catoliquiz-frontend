@@ -1,0 +1,18 @@
+<mat-toolbar class="header">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="triggerToggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h3 class="text-white">Quizz Católico</h3>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button (click)="logout()" mat-menu-item>
+        <i class="fas fa-sign-out-alt"></i>
+        Sair
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

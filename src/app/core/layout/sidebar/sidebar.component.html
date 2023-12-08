@@ -1,0 +1,3 @@
+<mat-nav-list *ngFor="let menu of menus">
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="menu.url">{{menu.name}}</a>
+</mat-nav-list>

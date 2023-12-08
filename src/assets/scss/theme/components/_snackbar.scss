@@ -1,0 +1,32 @@
+.danger-snackbar {
+  --mdc-snackbar-container-color: #ef5350;
+  white-space: pre-wrap;
+
+  .mat-simple-snackbar-action {
+      color: #fff !important;
+  }
+}
+
+.success-snackbar {
+  --mdc-snackbar-container-color: #28a745;
+  white-space: pre-wrap;
+
+  .mat-simple-snackbar-action {
+      color: #fff !important;
+  }
+}
+
+.warning-snackbar {
+  --mat-mdc-snack-bar-button-color: #000;
+  --mdc-snackbar-container-color: #d7df23;
+
+  .mdc-snackbar__label {
+      color: #000 !important;
+  }
+
+  white-space: pre-wrap;
+
+  .mat-simple-snackbar-action {
+      color: #000 !important;
+  }
+}

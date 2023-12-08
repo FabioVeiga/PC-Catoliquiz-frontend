@@ -1,0 +1,28 @@
+{
+  "teste": [
+    {
+      "id": 1,
+      "nome": "Teste",
+      "cnpj": "99.111.999/9999-99",
+      "ufCode": 35,
+      "lastNsu": "126993021",
+      "totalCount": 3
+    },
+    {
+      "id": 2,
+      "nome": "Teste 2",
+      "cnpj": "99.321.999/9999-99",
+      "ufCode": 36,
+      "lastNsu": "999999",
+      "totalCount": 3
+    },
+    {
+      "id": 3,
+      "nome": "Teste 3",
+      "cnpj": "99.123.999/9999-99",
+      "ufCode": 37,
+      "lastNsu": "12332131",
+      "totalCount": 3
+    }
+  ]
+}

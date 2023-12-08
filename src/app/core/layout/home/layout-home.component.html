@@ -1,0 +1,9 @@
+<mlocks-header (toogleSidebarEvent)="sidebarToggle()"></mlocks-header>
+<mat-drawer-container>
+  <mat-drawer #drawer mode="side" [opened]="sidebarOpened">
+    <mlocks-sidebar></mlocks-sidebar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

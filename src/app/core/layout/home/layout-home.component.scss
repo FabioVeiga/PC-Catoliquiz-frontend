@@ -1,0 +1,83 @@
+// .sidenav-container {
+//   height: 100%;
+// }
+
+// .sidenav {
+//   width: 250px;
+//   background: rgb(38, 38, 38);
+//   border: none;
+//   color: #fff;
+// }
+
+// .sidenav .mat-toolbar {
+//   background: inherit;
+// }
+
+// .content {
+//   padding: 2rem;
+//   height: 100%;
+// }
+
+// .header {
+//   background-color: #262626;
+// }
+
+// .spacer {
+//   flex: 1 1 auto;
+// }
+
+
+// .sidenav-body-container {
+//   overflow-y: auto;
+//   padding: 16px;
+//   box-sizing: border-box;
+// }
+
+// .menu-item {
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+// }
+
+// .menu-item mat-icon {
+//   margin-right: 8px;
+// }
+
+// .submenu {
+//   background-color: #04bf55 !important;
+//   cursor: pointer;
+//   border-radius: 4px;
+// }
+
+// .sidenav-container {
+//   height: 100%;
+// }
+
+// .mat-drawer-content {
+//   position: relative;
+//   z-index: 1;
+//   display: block;
+//   height: 100vh;
+//   overflow: auto;
+// }
+
+// @import "src/app/styles/variables";
+// @import "src/app/styles/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 250px;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer-content {
+  padding: 20px;
+}

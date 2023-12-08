@@ -1,1 +1,2 @@
-# PC-Catoliquiz-frontend
+# quizzcatolico
+Sistema ADMINISTRATIVO para Quizz Católico.

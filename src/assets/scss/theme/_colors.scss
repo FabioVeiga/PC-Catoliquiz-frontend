@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@include mat.core();
+$jet-palette: (
+  50 : #FFC1B4,
+  100 : #FFC1B4,
+  200 : #FFC1B4,
+  300 : #FFC1B4,
+  400 : #FFC1B4,
+  500 : #FFC1B4,
+  600 : #FFC1B4,
+  700 : #FFC1B4,
+  800 : #FFC1B4,
+  900 : #FFC1B4,
+  A100 : #FFC1B4,
+  A200 : #FFC1B4,
+  A400 : #FFC1B4,
+  A700 : #FFC1B4,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$jet-primary: mat.define-palette($jet-palette, 700, 300, 900);
+$jet-accent: mat.define-palette($jet-palette, 300, 100, 500);
+$jet-warn: mat.define-palette($jet-palette, 700);
+$jet-theme: mat.define-light-theme((color: (primary: $jet-primary,
+        accent: $jet-accent,
+        warn: $jet-warn,
+      )));
+@include mat.all-component-themes($jet-theme);

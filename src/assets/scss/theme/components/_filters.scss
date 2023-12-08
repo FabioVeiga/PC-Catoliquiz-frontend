@@ -1,0 +1,236 @@
+mat-card-header:not(.header-padrao) {
+  padding: 15px 20px 4px 20px !important;
+}
+
+.mat-mdc-card-title {
+  font-size: 15px !important;
+  color: #3f3f3f !important;
+}
+
+mat-card-header.mat-mdc-card-header.header-padrao {
+  padding-top: 15px;
+  display: block;
+}
+
+.filtros-header {
+  flex-wrap: wrap;
+
+  button,
+  a {
+    margin: 5px;
+  }
+
+  .eraser-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  .edit-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  mat-radio-button {
+    label.mat-radio-label {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.mat-mdc-card {
+  background-color: #fff;
+  border: 1px solid #e4e9f2 !important;
+  color: #555 !important;
+  box-shadow: none !important;
+}
+
+tr.mat-header-row {
+  height: 33px;
+}
+
+.mat-drawer-content {
+  height: calc(100vh - 70px) !important;
+}
+
+.mat-drawer-side {
+  border: 0;
+}
+
+
+mat-card-header:not(.header-padrao) {
+  padding: 15px 20px 4px 20px !important;
+}
+
+.mat-mdc-card-title {
+  font-size: 15px !important;
+  color: #3f3f3f !important;
+}
+
+mat-card-header.mat-mdc-card-header.header-padrao {
+  padding-top: 15px;
+  display: block;
+}
+
+.filtros-header {
+  flex-wrap: wrap;
+
+  button,
+  a {
+    margin: 5px;
+  }
+
+  .eraser-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  .edit-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  mat-radio-button {
+    label.mat-radio-label {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  app-cliente-autocomplete {
+    mat-form-field {
+      width: 100%;
+    }
+  }
+
+  app-cliente-autocomplete,
+  app-impressoras-autocomplete,
+  mat-form-field {
+    .mat-mdc-text-field-wrapper{
+      height: 3.2rem;
+    }
+    width: unset;
+    flex-grow: 1;
+    min-width: 120px;
+    max-width: 280px;
+  }
+
+
+  span.mat-button-wrapper {
+    margin-right: 0 !important;
+  }
+
+  app-cliente-autocomplete,
+  app-impressoras-autocomplete,
+  mat-form-field:not(:last-child),
+  mat-checkbox:not(:last-child),
+  mat-slide-toggle:not(:last-child) {
+    &:not(:last-child) {
+      margin-right: 12px;
+      // height: 4.5rem;
+    }
+  }
+
+  .mat-mdc-icon-button svg {
+    width: 1rem;
+  }
+
+  .mat-checkbox-layout {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    flex-direction: column !important;
+    margin-top: 10px;
+
+    app-cliente-autocomplete,
+    mat-form-field {
+      min-width: unset;
+      max-width: unset;
+      width: 100% !important;
+    }
+
+    *,
+    app-cliente-autocomplete {
+      margin-right: 0;
+    }
+
+    button,
+    a {
+      margin: 5px 0;
+    }
+  }
+}
+
+.filtros-header-painel {
+  flex-wrap: wrap;
+
+  .eraser-button {
+    color: #777;
+    cursor: pointer;
+  }
+
+  mat-radio-button {
+    label.mat-radio-label {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  mat-form-field,
+  app-impressoras-autocomplete {
+    width: 218px !important;
+    flex-grow: 1;
+    min-width: 218px !important;
+    max-width: 220px !important;
+  }
+
+  span.mat-button-wrapper {
+    margin-right: 0 !important;
+  }
+
+  mat-form-field:not(:last-child),
+  app-impressoras-autocomplete:not(:last-child),
+  mat-checkbox:not(:last-child) {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    flex-direction: column !important;
+    margin-top: 10px;
+
+    mat-form-field,
+    app-impressoras-autocomplete {
+      min-width: unset;
+      max-width: unset;
+      width: 100%;
+    }
+
+    * {
+      margin-right: 0;
+    }
+
+    button,
+    a {
+      margin: 5px 0;
+    }
+  }
+}
+
+.filtros-header-component {
+  margin-right: 20px;
+
+  mat-form-field,
+  app-impressoras-autocomplete {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,53 @@
+.icon-display {
+  transform: scale(1.5);
+}
+
+.content-scrollable {
+  max-height: 50vh; /* Defina a altura máxima conforme necessário */
+  overflow-y: auto;
+  width: 100%;
+}
+
+.border-content {
+  border: 1px solid #ccc; /* Adicione borda */
+  textarea {
+    min-height: 250px;
+  }
+  /* Outros estilos para o conteúdo rolável */
+}
+
+.content-center {
+  width: 100%;
+}
+
+.wrapper {
+  justify-content: center;
+}
+
+.no-border-textarea {
+  border: none;
+  resize: none; /* Impede que o usuário redimensione o textarea */
+  outline: none; /* Remove o contorno ao focar o textarea */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+.content-forms {
+  height: 1rem;
+}
+
+.question {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.response {
+  color: #6c757d;
+  font-weight: 600;
+}

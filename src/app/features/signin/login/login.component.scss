@@ -1,0 +1,31 @@
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+}
+
+.login-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-forms {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.forgotpass {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.field::placeholder {
+  font-size: 14px;
+}

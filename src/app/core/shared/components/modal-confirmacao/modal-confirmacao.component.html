@@ -1,0 +1,16 @@
+<div class="custom-modal">
+  <h2 class="title-modal" mat-dialog-title>
+    {{titulo}}
+  </h2>
+  <mat-divider></mat-divider>
+  <div mat-dialog-content>
+    <div [innerHTML]="data.texto"></div>
+  </div>
+  <hr>
+  <div class="d-flex text-right modal-actions" mat-dialog-actions>
+    <button *ngIf="textoOk" mat-flat-button  (click)="next()" class="close">{{textoOk}}</button>
+    <button *ngIf="textoCancelar" mat-flat-button mat-dialog-close class="close" >{{textoCancelar}}</button>
+    <button *ngIf="textoRemove" mat-flat-button mat-dialog-close style="background-color: #dc3939"
+      (click)="remove()">{{textoRemove}}</button>
+  </div>
+</div>
