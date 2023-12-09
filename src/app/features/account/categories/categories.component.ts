@@ -1,30 +1,24 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../../../core/services/api/api.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalUsersComponent } from './components/modal-users/modal-users.component';
-import { FormControl, FormGroup } from '@angular/forms';
+import { HttpErrorResponse } from '@angular/common/http';
+import { ModalCategoriesComponent } from './components/modal-categories/modal-categories.component';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+  selector: 'app-categories',
+  templateUrl: './categories.component.html',
+  styleUrl: './categories.component.scss'
 })
-export class UsersComponent implements OnInit {
+export class CategoriesComponent implements OnInit {
   isLoading: boolean = false;
 
   public opcaoStatus = [
     { status: '', descricao: 'Todos' },
     { status: true, descricao: 'Ativo' },
     { status: false, descricao: 'Inativo' },
-  ];
-
-  public opcaoBanido = [
-    { status: '', descricao: 'Todos' },
-    { status: true, descricao: 'Sim' },
-    { status: false, descricao: 'Não' },
   ];
 
   public opcaoDeletado = [
@@ -37,13 +31,10 @@ export class UsersComponent implements OnInit {
   grid: MatTableDataSource<any> = new MatTableDataSource<any>();
   displayedColumns: string[] = [
     'options',
-    'nome',
-    'apelido',
-    'email',
-    'nota',
-    'role',
     'codigo',
-    'banido',
+    'nome',
+    'descricao',
+    'corHexadecimal',
     'ativo',
   ];
 
@@ -51,8 +42,6 @@ export class UsersComponent implements OnInit {
     ativo: new FormControl(true),
     deletado: new FormControl(false),
     nome: new FormControl(''),
-    apelido: new FormControl(''),
-    banido: new FormControl(false),
   });
 
   constructor(
@@ -74,7 +63,7 @@ export class UsersComponent implements OnInit {
         paginaTamanho: this.paging.size,
       },
     };
-    this.service.post('v1/Usuario/buscar-lista-usuarios', obj).subscribe({
+    this.service.post('v1/QuizCategoria/buscar-por-filtro', obj).subscribe({
       next: (response: any) => {
         this.grid.data = response.data.itens;
         response.data.itens.length
@@ -96,8 +85,8 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  details(data?: any) {
-    const dialogRef = this.dialog.open(ModalUsersComponent, {
+  edit(data?: any) {
+    const dialogRef = this.dialog.open(ModalCategoriesComponent, {
       width: '540px',
       data: data,
     });

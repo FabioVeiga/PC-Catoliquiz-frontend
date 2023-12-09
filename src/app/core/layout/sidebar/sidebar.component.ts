@@ -8,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
   public menus = [
     {
-      name: 'Dashboard',
-      url: '',
-    },
-    {
       name: 'Usuários',
       url: 'usuarios',
+    },
+    {
+      name: 'Categorias',
+      url: 'categorias',
+    },
+    {
+      name: 'Perguntas',
+      url: 'perguntas',
     },
   ];
   constructor() {}

@@ -19,6 +19,7 @@ import { CpfCnpjPipe } from './pipes/cpfCnpj.pipe';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { globalRippleConfig } from '../core.module';
+import { NgxColorsModule } from 'ngx-colors';
 
 registerLocaleData(ptBR, 'pt-BR');
 export const MY_FORMATS = {
@@ -43,6 +44,7 @@ export const MY_FORMATS = {
     FormsModule,
     ReactiveFormsModule,
     CdkTableModule,
+    NgxColorsModule,
   ],
   declarations: [
     PaginacaoComponent,
@@ -60,6 +62,7 @@ export const MY_FORMATS = {
     FormsModule,
     ReactiveFormsModule,
     CdkTableModule,
+    NgxColorsModule,
     PaginacaoComponent,
     ModalConfirmacaoComponent,
     CpfCnpjPipe,

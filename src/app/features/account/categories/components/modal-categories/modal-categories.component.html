@@ -1,0 +1,26 @@
+<div class="custom-modal">
+  <div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle class="header">
+    <h3 mat-dialog-title>Detalhes usuários</h3>
+    <mat-icon mat-dialog-close="cancel">close</mat-icon>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-progress-bar [hidden]="!isLoading" color="primary" mode="indeterminate"></mat-progress-bar>
+  <div mat-dialog-content class="content">
+    <form *ngIf="!isLoading" [formGroup]="form">
+      <div class="element-inline">
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome" required placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Descrição</mat-label>
+          <input matInput formControlName="descricao" required placeholder="Descrição">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Cor Hexadecimal</mat-label>
+          <input matInput type="color" [(ngModel)]="hexColor" required placeholder="Cor Hexadecimal">
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
