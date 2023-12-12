@@ -18,9 +18,13 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Cor Hexadecimal</mat-label>
-          <input matInput type="color" [(ngModel)]="hexColor" required placeholder="Cor Hexadecimal">
+          <input matInput type="color" formControlName="corHexadecimal" required placeholder="Cor Hexadecimal">
         </mat-form-field>
       </div>
     </form>
+  </div>
+  <div mat-dialog-actions>
+    <button color="primary" mat-raised-button [disabled]="form.invalid || isLoading" (click)="save()">{{
+    info === null ? 'Criar' : 'Salvar'}}</button>
   </div>
 </div>
