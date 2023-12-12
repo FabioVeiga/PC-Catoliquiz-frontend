@@ -8,6 +8,7 @@ import { ModalUsersComponent } from './users/components/modal-users/modal-users.
 import { CategoriesComponent } from './categories/categories.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ModalCategoriesComponent } from './categories/components/modal-categories/modal-categories.component';
+import { ModalQuestionsComponent } from './questions/components/modal-questions/modal-questions.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ModalCategoriesComponent } from './categories/components/modal-categori
     CategoriesComponent,
     ModalCategoriesComponent,
     QuestionsComponent,
+    ModalQuestionsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [CommonModule, AccountRoutingModule, SharedModule],
