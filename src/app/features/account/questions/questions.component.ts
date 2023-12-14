@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../../../core/services/api/api.service';
+import { ModalQuestionsComponent } from './components/modal-questions/modal-questions.component';
 
 @Component({
   selector: 'app-questions',
@@ -15,13 +16,11 @@ export class QuestionsComponent {
   isLoading: boolean = false;
 
   public opcaoStatus = [
-    { status: null, descricao: 'Todos' },
     { status: true, descricao: 'Ativo' },
     { status: false, descricao: 'Inativo' },
   ];
 
   public opcaoDeletado = [
-    { status: null, descricao: 'Todos' },
     { status: true, descricao: 'Sim' },
     { status: false, descricao: 'Não' },
   ];
@@ -31,9 +30,10 @@ export class QuestionsComponent {
   displayedColumns: string[] = [
     'options',
     'codigo',
-    'nome',
-    'descricao',
-    'corHexadecimal',
+    'pergunta',
+    'categoria',
+    'dica',
+    'dificuldade',
     'ativo',
   ];
 
@@ -57,12 +57,12 @@ export class QuestionsComponent {
     this.isLoading = true;
     const obj = {
       ...this.form.value,
-      paginacao: {
+      paginacaoRequest: {
         paginaIndex: this.paging.index + 1,
         paginaTamanho: this.paging.size,
       },
     };
-    this.service.get('v1/QuizPergunta/buscar-por-filtro', obj).subscribe({
+    this.service.post('v1/QuizPergunta/buscar-por-filtro', obj).subscribe({
       next: (response: any) => {
         this.grid.data = response.data.itens;
         response.data.itens.length
@@ -85,15 +85,15 @@ export class QuestionsComponent {
   }
 
   edit(data?: any) {
-    // const dialogRef = this.dialog.open(ModalCategoriesComponent, {
-    //   width: '540px',
-    //   data: data,
-    // });
-    // dialogRef.afterClosed().subscribe((response) => {
-    //   if (response !== 'cancel') {
-    //     this.getAll();
-    //   }
-    // });
+    const dialogRef = this.dialog.open(ModalQuestionsComponent, {
+      width: '700px',
+      data: data,
+    });
+    dialogRef.afterClosed().subscribe((response) => {
+      if (response !== 'cancel') {
+        this.getAll();
+      }
+    });
   }
 
   onPageChange(evt: { pageIndex: number; pageSize: number }) {

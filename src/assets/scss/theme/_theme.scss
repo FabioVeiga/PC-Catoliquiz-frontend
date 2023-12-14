@@ -25,6 +25,12 @@ h3 {
   color: #333 !important
 }
 
+th {
+  font-weight: bold !important;
+  color: #333 !important;
+  background-color: gainsboro !important;
+}
+
 // Alteração de mat-form-field, removendo o fundo;
 mat-form-field {
   width: 100%;
@@ -51,6 +57,7 @@ mat-form-field {
 .no-padding {
   padding: 0 !important;
 }
+
 //Definir filtros na mesma linha;
 
 .element-inline {
@@ -81,6 +88,6 @@ mat-form-field {
   }
 }
 
-.border-bottom{
+.border-bottom {
   border-top: 1px solid #e4e9f2 !important;
 }

@@ -9,22 +9,57 @@
     <form *ngIf="!isLoading" [formGroup]="form">
       <div class="element-inline">
         <mat-form-field>
-          <mat-label>Nome</mat-label>
-          <input matInput formControlName="nome" required placeholder="Nome">
+          <mat-label>Categoria</mat-label>
+          <mat-select formControlName="categoria" required>
+            <mat-option *ngFor="let r of categories" [value]="r.codigo">
+              {{ r.nome }}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Descrição</mat-label>
-          <input matInput formControlName="descricao" required placeholder="Descrição">
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Cor Hexadecimal</mat-label>
-          <input matInput type="color" formControlName="corHexadecimal" required placeholder="Cor Hexadecimal">
+          <mat-label>Dificuldade</mat-label>
+          <mat-select formControlName="quizNivelDificuldade" required>
+            <mat-option *ngFor="let r of quizDificuldade" [value]="r.status">
+              {{ r.descricao }}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Pergunta</mat-label>
+        <textarea matInput rows="3" formControlName="pergunta" placeholder="Pergunta"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Dica</mat-label>
+        <input matInput formControlName="dica" required placeholder="Dica">
+      </mat-form-field>
+      <h3 class="text-center">Respostas</h3>
+      <mat-card class="p-3">
+        <div formArrayName="respostas">
+          <div *ngFor="let respostaGroup of respostasFormArray.controls; let i = index" class="resposta-item"
+            [formGroupName]="i">
+            <div class="d-inline-flex" style="column-gap: 10px; width: 100%;">
+              <mat-form-field appearance="outline" [class.resposta-correta]="isRespostaCorreta(i)">
+                <mat-label>Resposta</mat-label>
+                <input matInput placeholder="Resposta" formControlName="resposta" required>
+                <mat-icon matSuffix *ngIf="isRespostaCorreta(i)">check_circle</mat-icon>
+                <mat-hint *ngIf="isRespostaCorreta(i)">Esta é a resposta correta.</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="largura-quiz-resposta-peso" appearance="outline">
+                <mat-label>Peso</mat-label>
+                <mat-select formControlName="quizRespostaPeso" required>
+                  <mat-option [value]="0">0</mat-option>
+                  <mat-option [value]="1">1</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </mat-card>
     </form>
   </div>
   <div mat-dialog-actions>
     <button color="primary" mat-raised-button [disabled]="form.invalid || isLoading" (click)="save()">{{
-    info === null ? 'Criar' : 'Salvar'}}</button>
+      info === null ? 'Criar' : 'Salvar'}}</button>
   </div>
 </div>

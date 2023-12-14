@@ -16,13 +16,11 @@ export class CategoriesComponent implements OnInit {
   isLoading: boolean = false;
 
   public opcaoStatus = [
-    { status: '', descricao: 'Todos' },
     { status: true, descricao: 'Ativo' },
     { status: false, descricao: 'Inativo' },
   ];
 
   public opcaoDeletado = [
-    { status: '', descricao: 'Todos' },
     { status: true, descricao: 'Sim' },
     { status: false, descricao: 'Não' },
   ];

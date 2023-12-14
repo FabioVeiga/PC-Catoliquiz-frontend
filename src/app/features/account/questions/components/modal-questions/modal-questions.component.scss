@@ -1,0 +1,12 @@
+::ng-deep .mat-mdc-form-field.resposta-correta .mat-mdc-text-field-wrapper {
+  background-color: #a1eaa1 !important;
+}
+
+::ng-deep .mat-mdc-form-field.resposta-correta mat-icon {
+  color: green;
+  margin-left: 8px;
+}
+
+.largura-quiz-resposta-peso {
+  width: 140px;
+}
