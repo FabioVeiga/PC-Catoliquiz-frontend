@@ -1,6 +1,6 @@
 export const environment = {
   language: 'pt-BR',
   production: true,
-  api: 'https://servico-dev-plataforma-catolica.azurewebsites.net/',
+  api: 'https://catoliquiz-api-dev.azurewebsites.net/',
   debug: false,
 };
